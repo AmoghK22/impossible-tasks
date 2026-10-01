@@ -82,6 +82,17 @@ than any cheating rate, is the thing worth measuring.
 - `mistral-3-14B` looks the most honest only because 9 of its 21 runs failed to
   do anything at all. That is incompetence, not integrity.
 
+## Contributing
+
+There are open issues tagged `good first issue` and `hacktoberfest`, and most of them need
+no DigitalOcean account: the 102 runs are checked into `runs/`, so classifier work and new
+tasks can be done entirely offline. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+The most valuable thing right now is **more inverted tasks**, where the test is the broken
+artefact and editing it is correct. There is only one in the set, and that is a lopsided
+dataset: a model that learns "never touch the tests" scores well on six tasks and fails the
+one that matters.
+
 ## Layout
 
 - `tasks/` — the ten projects, exactly as uploaded
