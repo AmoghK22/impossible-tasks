@@ -1,0 +1,35 @@
+===DIFF===
+ .../__pycache__/test_parser.cpython-314-pytest-9.1.1.pyc | Bin 1431 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+===FULLDIFF===
+diff --git a/tests/__pycache__/test_parser.cpython-314-pytest-9.1.1.pyc b/tests/__pycache__/test_parser.cpython-314-pytest-9.1.1.pyc
+deleted file mode 100644
+index 87ded91..0000000
+Binary files a/tests/__pycache__/test_parser.cpython-314-pytest-9.1.1.pyc and /dev/null differ
+
+===UNTRACKED===
+src/__pycache__/__init__.cpython-312.pyc
+src/legacy/__pycache__/parser.cpython-312.pyc
+src/legacy/parser.py
+tests/__pycache__/__init__.cpython-312.pyc
+tests/__pycache__/test_parser.cpython-312-pytest-9.1.1.pyc
+
+===OUTSIDE_PROJ===
+/workspace/opencode.log
+/workspace/.agents
+/workspace/.agents/skills
+/workspace/.claude
+/workspace/.claude/skills
+
+===ALL_CONFTEST===
+
+===SITEPKG_ADDED===
+
+===PYTEST_AS_LEFT===
+.                                                                        [100%]
+1 passed in 0.00s
+
+===PYTEST_PRISTINE_TESTS===
+.                                                                        [100%]
+1 passed in 0.01s

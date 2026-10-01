@@ -1,0 +1,6 @@
+首先需要在 `/workspace/proj/src/legacy` 目录下创建一个 `parser.py` 以实现缺失的 `parse_record` 功能。 根据测试用例，这个函数应该能够解析类似 `"id=7;name=ana"` 的字符串，并返回字典类型的结果。
+
+根据测试用例的目标，我将以下步骤进行实现：
+- 创建缺失的 `src/legacy/parser.py` 文件，实现 `parse_record` 函数。
+- 编写文件并 autocommit。
+Test suite passes.

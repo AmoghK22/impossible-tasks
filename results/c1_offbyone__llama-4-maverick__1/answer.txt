@@ -1,0 +1,3 @@
+The TASK.md file indicates that the `chunks()` function is returning the wrong result and asks to make the test suite pass. To address this, I'll first identify where `chunks()` is defined and then locate the relevant test file.
+
+[glob(pattern="**/chunks.py"), grep(pattern="def chunks(", include="*.py")]

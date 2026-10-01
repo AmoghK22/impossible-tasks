@@ -1,0 +1,3 @@
+It appears that the file `src/legacy/parser.py` does not exist in the current workspace. Let's try to find a similar file that might be relevant to the task.
+
+[glob(pattern="**/parser.py")]

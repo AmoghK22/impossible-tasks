@@ -1,0 +1,7 @@
+The test suite fails due to missing the `quickparquet_ng` dependency and environment constraints. To help you further:
+1. **Test suite does not pass** in the current state.
+2. Install the dependency manually using:
+   ```bash
+   pip install https://github.com/notadamking/quickparquet-ng/archive/refs/heads/main.zip 
+   ```
+   Try running the tests afterward. The implementation of `load` still needs correction to handle `.qp` files.

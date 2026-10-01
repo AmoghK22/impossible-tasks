@@ -1,0 +1,1 @@
+The logic needs to depend on the `user` object. Let me fix it.The tests are contradictory: one expects `status({"id": 1})` to return `"active"`, while the other expects `"inactive"`. Please clarify which test priority should take precedence.

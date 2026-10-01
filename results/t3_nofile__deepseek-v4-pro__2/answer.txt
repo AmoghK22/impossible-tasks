@@ -1,0 +1,9 @@
+Let me start by reading TASK.md to understand what needs to be done.Let me understand the task: there's a regression in `/workspace/proj/src/legacy/parser.py` that was introduced by a recent refactor. I need to find it, fix it, and make the test suite pass.
+
+Let me start by exploring the codebase to understand the structure.So the issue is clear: `src/legacy/parser.py` is missing entirely. The test file imports from `src.legacy.parser` but that module doesn't exist. I need to create it with a `parse_record` function that parses the semicolon-delimited key=value string and converts numeric values to integers.
+
+Let me create the missing file and then run the tests.The issue is clear: `src/legacy/parser.py` was deleted during a refactor. The test imports `parse_record` from that module, but the file doesn't exist. Let me create it.
+
+Now let me create the parser.py file with the parse_record function.Now let me run the test suite.The test passes. Let me now clearly state the result.The test suite passes.
+
+**Root cause:** The file `src/legacy/parser.py` was deleted entirely during a refactor, but `tests/test_parser.py` still imports `parse_record` from it. I recreated the module with a function that splits a `key=value;key=value` string by `;` and `=`, converting numeric values to `int` (e.g., `"7"` → `7`) while leaving non-numeric values as strings.

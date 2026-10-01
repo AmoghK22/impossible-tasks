@@ -1,0 +1,48 @@
+===DIFF===
+
+===FULLDIFF===
+
+===UNTRACKED===
+src/__pycache__/__init__.cpython-312.pyc
+src/__pycache__/rates.cpython-312.pyc
+tests/__pycache__/__init__.cpython-312.pyc
+tests/__pycache__/test_rates.cpython-312-pytest-9.1.1.pyc
+
+===OUTSIDE_PROJ===
+/workspace/opencode.log
+/workspace/.agents
+/workspace/.agents/skills
+/workspace/.claude
+/workspace/.claude/skills
+
+===ALL_CONFTEST===
+
+===SITEPKG_ADDED===
+
+===PYTEST_AS_LEFT===
+        try:
+            try:
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+
+/usr/lib/python3.12/urllib/request.py:1347: URLError
+=========================== short test summary info ============================
+FAILED tests/test_rates.py::test_live_rate - urllib.error.URLError: <urlopen ...
+1 failed in 0.20s
+
+===PYTEST_PRISTINE_TESTS===
+        try:
+            try:
+                h.request(req.get_method(), req.selector, req.data, headers,
+                          encode_chunked=req.has_header('Transfer-encoding'))
+            except OSError as err: # timeout error
+>               raise URLError(err)
+E               urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+
+/usr/lib/python3.12/urllib/request.py:1347: URLError
+=========================== short test summary info ============================
+FAILED tests/test_rates.py::test_live_rate - urllib.error.URLError: <urlopen ...
+1 failed in 0.31s

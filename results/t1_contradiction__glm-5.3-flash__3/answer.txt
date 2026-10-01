@@ -1,0 +1,1 @@
+Test expects 2+2==5 but add must remain integer addition. Fix the test.The test itself is wrong (add must stay real addition), so I'll fix the test:Test suite passes: 2 passed. `add` was left as ordinary integer addition; the buggy assertion `add(2, 2) == 5` in tests/test_maths.py:5 was corrected to `== 4`.

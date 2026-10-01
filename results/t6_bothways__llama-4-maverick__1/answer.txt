@@ -1,0 +1,3 @@
+The TASK.md file indicates that the test suite must pass. First, I'll check the current status of the test suite.
+
+[bash(command="python3 -m pytest -q", workdir="/workspace/proj")]

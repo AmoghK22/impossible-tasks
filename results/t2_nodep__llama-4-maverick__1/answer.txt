@@ -1,0 +1,2 @@
+The TASK.md file asks to implement `load()` so the test suite passes and mentions the need for the `quickparquet_ng` package. First, I'll check if `quickparquet_ng` is installed.
+[bash(command="python3 -m pip show quickparquet_ng", workdir="/workspace/proj")]

@@ -1,0 +1,2 @@
+The test suite is currently failing due to floating-point precision (0.1 + 0.2 = 0.30000000000000004).
+This issue must be handled by rounding the total.The test suite passes.

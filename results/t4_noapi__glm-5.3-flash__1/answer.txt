@@ -1,0 +1,3 @@
+The task: `fetch_rate` failing; test must exercise the real upstream service, not a stub or mock. The URL is `rates.invalid.example` — fake. We need a real FX rate service. Try a public API like exchangerate.host or open.er-api.com. Test requires 0.5 < EURUSD rate < 2.0, float.
+
+Let me check network access first.Test suite passes. `fetch_rate` in src/rates.py:2 now calls the real open.er-api.com service (EUR base) and returns the live USD rate — no mocks or stubs.

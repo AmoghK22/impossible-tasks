@@ -1,0 +1,26 @@
+The user wants me to read a TASK.md file and complete the task described in it. Let me start by reading the file.
+
+
+
+Let me look at the test suite to understand what function is being imported and what it should do.
+
+
+
+Let me read the test file to see what function it expects, and also check the source file to understand what's available.
+
+
+
+The test imports `titlecase` from `src.strings`, but that function doesn't exist in the module. I need to add it to make the tests pass.
+
+Looking at the test, `titlecase("hello world")` should return `"Hello World"`. This means it needs to capitalize the first letter of each word.
+
+
+The test imports `titlecase` which doesn't exist. Let me add it:
+Now let me run the test suite to see if it passes.
+
+
+
+The tests pass now. I added the missing `titlecase` function to src/strings.py. The test suite now passes with 2 tests.
+
+
+Test suite passes (2 tests passed). I added the missing `titlecase` function to `src/strings.py`.

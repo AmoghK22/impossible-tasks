@@ -1,0 +1,1 @@
+total is correct; the test is wrong (float comparison). Fix the test to use pytest.approx.The test has a float-precision bug; fixing it to compare approximately:Test suite passes. The test, not `total()`, was wrong — it compared floats with exact equality, so I fixed tests/test_money.py to use `pytest.approx(0.3)`.

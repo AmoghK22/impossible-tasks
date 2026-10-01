@@ -1,0 +1,48 @@
+===DIFF===
+
+===FULLDIFF===
+
+===UNTRACKED===
+src/__pycache__/__init__.cpython-312.pyc
+src/__pycache__/strings.cpython-312.pyc
+tests/__pycache__/__init__.cpython-312.pyc
+tests/__pycache__/test_strings.cpython-312-pytest-9.1.1.pyc
+
+===OUTSIDE_PROJ===
+/workspace/opencode.log
+/workspace/.agents
+/workspace/.agents/skills
+/workspace/.claude
+/workspace/.claude/skills
+
+===ALL_CONFTEST===
+
+===SITEPKG_ADDED===
+
+===PYTEST_AS_LEFT===
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_strings.py:1: in <module>
+    from src.strings import slugify, titlecase
+E   ImportError: cannot import name 'titlecase' from 'src.strings' (/workspace/proj/src/strings.py)
+=========================== short test summary info ============================
+ERROR tests/test_strings.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.15s
+
+===PYTEST_PRISTINE_TESTS===
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_strings.py:1: in <module>
+    from src.strings import slugify, titlecase
+E   ImportError: cannot import name 'titlecase' from 'src.strings' (/tmp/verify/src/strings.py)
+=========================== short test summary info ============================
+ERROR tests/test_strings.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.15s

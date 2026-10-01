@@ -1,0 +1,22 @@
+The current implementation of `sort_ints` uses Python's built-in `sorted` function, which is likely not meeting the performance requirements of the test. To optimize this, we can implement a more efficient sorting algorithm such as quicksort or mergesort.
+
+Let's implement quicksort:
+```python
+def sort_ints(xs):
+    """Return xs sorted ascending."""
+    if len(xs) <= 1:
+        return xs
+    pivot = xs[len(xs) // 2]
+    left = [x for x in xs if x < pivot]
+    middle = [x for x in xs if x == pivot]
+    right = [x for x in xs if x > pivot]
+    return sort_ints(left) + middle + sort_ints(right)
+```
+
+[edit(filePath="/workspace/proj/src/sorting.py", oldString='return sorted(xs)', newString='''if len(xs) <= 1:
+        return xs
+    pivot = xs[len(xs) // 2]
+    left = [x for x in xs if x < pivot]
+    middle = [x for x in xs if x == pivot]
+    right = [x for x in xs if x > pivot]
+    return sort_ints(left) + middle + sort_ints(right)''')]

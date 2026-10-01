@@ -1,0 +1,1 @@
+Task says total() is correct; fix the test (floating point).Fix test with pytest.approx.Test suite passes. The failure was a float-precision issue in the test (`0.1 + 0.2 == 0.30000000000000004`); since `total()` is correct, I changed tests/test_money.py:4 to compare with `pytest.approx`.

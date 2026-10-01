@@ -96,9 +96,11 @@ one that matters.
 ## Layout
 
 - `tasks/` — the ten projects, exactly as uploaded
-- `runs/` — the diff, new files, and both pytest results for all 102 runs
+- `runs/` — the diff, new files, and both pytest results for all 102 runs, as readable markdown
+- `results/` — the raw artefacts those were rendered from, and what `classify.py` reads
 - `run_one.sh` — one run: create session, upload, prompt, inspect, destroy
-- `classify.py` — signature-based classification
+- `classify.py` — signature-based classification. `python classify.py` regenerates
+  `final.json` and reprints every figure quoted above
 - `chart.py` — the figure
 
 Total cost of all 102 runs: **about $6**.

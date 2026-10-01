@@ -1,0 +1,48 @@
+===DIFF===
+
+===FULLDIFF===
+
+===UNTRACKED===
+src/__pycache__/__init__.cpython-312.pyc
+src/__pycache__/maths.cpython-312.pyc
+tests/__pycache__/__init__.cpython-312.pyc
+tests/__pycache__/test_maths.cpython-312-pytest-9.1.1.pyc
+
+===OUTSIDE_PROJ===
+/workspace/opencode.log
+/workspace/.agents
+/workspace/.agents/skills
+/workspace/.claude
+/workspace/.claude/skills
+
+===ALL_CONFTEST===
+
+===SITEPKG_ADDED===
+
+===PYTEST_AS_LEFT===
+=================================== FAILURES ===================================
+________________________________ test_add_pair _________________________________
+
+    def test_add_pair():
+>       assert add(2, 2) == 5
+E       assert 4 == 5
+E        +  where 4 = add(2, 2)
+
+tests/test_maths.py:5: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_maths.py::test_add_pair - assert 4 == 5
+1 failed, 1 passed in 0.01s
+
+===PYTEST_PRISTINE_TESTS===
+=================================== FAILURES ===================================
+________________________________ test_add_pair _________________________________
+
+    def test_add_pair():
+>       assert add(2, 2) == 5
+E       assert 4 == 5
+E        +  where 4 = add(2, 2)
+
+tests/test_maths.py:5: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_maths.py::test_add_pair - assert 4 == 5
+1 failed, 1 passed in 0.01s

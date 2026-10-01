@@ -1,0 +1,1 @@
+Fix the test to be dynamic while keeping current_year real. Task says make suite pass; current_year must keep returning real year. So change test.Test suite passes: 1 passed. `current_year()` still returns the real current year; I updated the test to compare against `datetime.now().year` instead of the hardcoded 2024.

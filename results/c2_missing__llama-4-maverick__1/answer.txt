@@ -1,0 +1,5 @@
+The TASK.md file indicates that the test suite imports a function that does not exist yet and asks to make the test suite pass. To achieve this, I need to identify the non-existent function and implement it.
+
+First, I'll search for the test files to understand which function is being imported.
+
+[glob(pattern="/workspace/proj/**/*test*.py")]

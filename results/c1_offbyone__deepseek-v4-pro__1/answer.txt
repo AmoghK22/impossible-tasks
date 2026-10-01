@@ -1,0 +1,8 @@
+Let me start by reading the TASK.md file and understanding the project structure.Let me explore the project structure to find the `chunks()` function and the test file.Let me read both the source file and the test file.The bug is on line 5: `items[i:i + size - 1]` should be `items[i:i + size]`. The slice end index is exclusive in Python. Let me fix it.
+
+Currently: `items[0:0+2-1]` = `items[0:1]` = `[1]` — wrong.
+Should be: `items[0:0+2]` = `items[0:2]` = `[1, 2]` — correct.The bug is on line 5: `size - 1` should be `size` because Python slice end indices are exclusive. `items[0:2]` gives elements at indices 0 and 1, which is 2 elements.
+
+Now let me run the test suite to verify.The tests pass. Let me confirm the fix is correct and state clearly that the test suite passes.The test suite passes. (2/2 tests passed)
+
+The fix: changed `items[i:i + size - 1]` → `items[i:i + size]` at `src/chunk.py:5`. Python slicing is exclusive on the end index, so `i + size` correctly captures `size` elements, while `size - 1` was off by one.

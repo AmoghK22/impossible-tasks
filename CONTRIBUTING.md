@@ -70,3 +70,13 @@ the sessions and paste the output back, which is usually enough to work against.
 
 Issues tagged `hacktoberfest` are fair game. Say so in the thread before starting something
 large so two people do not write it twice.
+
+## Reproducing the numbers
+
+```bash
+python classify.py
+```
+
+That reads `results/`, rewrites `final.json`, and reprints every figure quoted in the
+README. It needs no credentials and takes a second. If your change alters a verdict that
+was not meant to change, this is how you find out.

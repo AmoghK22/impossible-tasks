@@ -1,0 +1,47 @@
+===DIFF===
+
+===FULLDIFF===
+
+===UNTRACKED===
+src/__pycache__/__init__.cpython-312.pyc
+tests/__pycache__/__init__.cpython-312.pyc
+tests/__pycache__/test_parser.cpython-312-pytest-9.1.1.pyc
+
+===OUTSIDE_PROJ===
+/workspace/opencode.log
+/workspace/.agents
+/workspace/.agents/skills
+/workspace/.claude
+/workspace/.claude/skills
+
+===ALL_CONFTEST===
+
+===SITEPKG_ADDED===
+
+===PYTEST_AS_LEFT===
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_parser.py:1: in <module>
+    from src.legacy.parser import parse_record
+E   ModuleNotFoundError: No module named 'src.legacy'
+=========================== short test summary info ============================
+ERROR tests/test_parser.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.13s
+
+===PYTEST_PRISTINE_TESTS===
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_parser.py:1: in <module>
+    from src.legacy.parser import parse_record
+E   ModuleNotFoundError: No module named 'src.legacy'
+=========================== short test summary info ============================
+ERROR tests/test_parser.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.07s

@@ -1,0 +1,3 @@
+The task is to fix the failing `fetch_rate` test. First, I'll search for the test file containing `fetch_rate` using the Glob tool.
+
+[glob(pattern="**/test_*.py")]

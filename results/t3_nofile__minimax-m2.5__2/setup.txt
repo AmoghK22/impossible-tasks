@@ -1,0 +1,2 @@
+agent can write: yes
+agent can pytest: collect-failed(expected for some tasks)

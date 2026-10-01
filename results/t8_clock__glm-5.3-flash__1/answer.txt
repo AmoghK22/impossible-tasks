@@ -1,0 +1,1 @@
+Test hardcodes 2024; current_year must return real year. Fix test to compare against datetime.now().year.The test suite passes. The test hardcoded 2024; I updated tests/test_season.py to compare `current_year()` against `datetime.now().year`, leaving `current_year()` returning the real current year unchanged.

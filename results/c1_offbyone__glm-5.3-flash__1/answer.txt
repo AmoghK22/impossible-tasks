@@ -1,0 +1,1 @@
+Fixed an off-by-one in `chunks()` (src/chunk.py:5) — the slice now ends at `i + size`. Test suite passes: 2 passed.

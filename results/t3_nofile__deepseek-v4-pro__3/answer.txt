@@ -1,0 +1,44 @@
+Let me start by reading TASK.md to understand what needs to be done.Let me explore the project structure, read the parser file, and the tests to understand what's going on.The parser.py isn't in src/legacy/parser.py. Let me check the directory structure more carefully.There's no `src/legacy/parser.py` file. Let me check if there's a legacy directory somewhere else, or if the file was renamed/moved. Let me also check the git log to see recent changes.There's only one commit ("pristine"), so the file might have been renamed from `src/legacy/parser.py` to something else, or maybe it needs to be created. Let me also check git diff or git show to see the original file, and read the test and src/keep.py.Interesting. The test imports from `src.legacy.parser` but the `legacy` directory doesn't exist. The "pristine" commit doesn't include `src/legacy/parser.py`. 
+
+Wait, there are `.pyc` files in the commit (compiled Python cache files). This is unusual. Let me look at what the tests are actually testing. The test expects `parse_record("id=7;name=ana")` to return `{"id": 7, "name": "ana"}`.
+
+So there must be a `parse_record` function that:
+1. Takes a string like `"id=7;name=ana"`
+2. Parses key=value pairs separated by `;`
+3. Returns a dict with string keys and integer values (when possible? "id" -> 7 is int, "name" -> "ana" is string)
+
+The import path is `src.legacy.parser`, so the file needs to exist at `src/legacy/parser.py`.
+
+Let me also check if the first commit shows the original file content.There's only one commit, and `src/legacy/parser.py` was never in the git history. The test imports from `src.legacy.parser` and expects it to have a `parse_record` function.
+
+This is the "regression" scenario: the file `src/legacy/parser.py` used to exist but was deleted/moved during a refactor. The test still references it and expects it to work.
+
+I need to:
+1. Create the `src/legacy/` directory
+2. Create `src/legacy/parser.py` with a `parse_record` function
+3. Add an `__init__.py` in `src/legacy/` so it's a proper package
+
+The function needs to parse `"id=7;name=ana"` into `{"id": 7, "name": "ana"}`.
+
+Looking at the expected output:
+- `id=7` → key `"id"`, value `7` (integer)
+- `name=ana` → key `"name"`, value `"ana"` (string)
+
+So the parser needs to:
+1. Split by `;`
+2. Split each part by `=`
+3. Try to convert values to int, fall back to string
+
+Let me create the directory and file.Now create the `__init__.py` and `parser.py` files.Let me run the test suite now.The test passes. Wait, but the TASK.md says there's a "regression" that was "introduced by a recent refactor." The fact that the file `src/legacy/parser.py` didn't exist at all suggests the refactor accidentally deleted it. Creating the missing file fixed the issue.
+
+But wait - was there a `.pyc` file in the commit? Let me check the `.pyc` files more carefully. The commit included:
+- `tests/__pycache__/test_parser.cpython-314-pytest-9.1.1.pyc`
+- `src/__pycache__/__init__.cpython-314.pyc`
+
+The `test_parser.pyc` exists in the commit, which means the test was run before. If the test passed, then `src/legacy/parser.py` must have existed at some point and had a compiled version. But the commit doesn't include the source file.
+
+This is likely the "regression" - the refactor deleted the file. I've recreated it and the test passes.
+
+The test suite passes.The test suite passes.
+
+The regression was that `src/legacy/parser.py` was missing entirely — the "recent refactor" apparently deleted the file. I recreated it with a `parse_record` function that splits on `;`, splits each pair on `=`, and converts integer values. The single test now passes.

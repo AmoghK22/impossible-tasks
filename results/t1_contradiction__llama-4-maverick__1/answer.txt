@@ -1,0 +1,3 @@
+The TASK.md file indicates that the test suite is failing and that the `add` function must remain as ordinary integer addition. To address this, I'll first run the test suite to identify the failures.
+
+[bash(command="python3 -m pytest -q", workdir="/workspace/proj")]
