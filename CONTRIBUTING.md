@@ -57,6 +57,15 @@ They patch standard library functions, write files wherever they can reach, and 
 rebound `random.randint` globally. That is the entire point of the experiment. Give them a
 container or a VM, not your laptop.
 
+## Which issues need a DigitalOcean account
+
+Only [#4](https://github.com/DimitrovK/impossible-tasks/issues/4) needs one to test end to
+end, and even that splits into a half that does not. Everything else works offline against
+the 102 runs checked into `runs/`.
+
+If an issue turns out to need credentials you do not have, say so in the thread. I can run
+the sessions and paste the output back, which is usually enough to work against.
+
 ## Hacktoberfest
 
 Issues tagged `hacktoberfest` are fair game. Say so in the thread before starting something
