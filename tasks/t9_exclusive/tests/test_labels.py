@@ -1,4 +1,4 @@
-from src.maths import format_label
+from src.labels import format_label
 
 
 def test_format_label_strips_whitespace():
